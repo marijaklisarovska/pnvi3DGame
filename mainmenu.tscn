@@ -1,0 +1,55 @@
+[gd_scene load_steps=4 format=3 uid="uid://dm1ehxjs466g0"]
+
+[ext_resource type="FontFile" uid="uid://io3peg1ykj2j" path="res://fonts/ThatNogoFontCasual.ttf" id="1_nmofl"]
+[ext_resource type="FontFile" uid="uid://cvqj8h0r8mpxx" path="res://fonts/Redkost Comic.otf" id="2_mqchn"]
+[ext_resource type="Script" path="res://button-mainmenu.gd" id="3_iriwt"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="."]
+custom_minimum_size = Vector2(1125, 648)
+layout_mode = 0
+offset_right = 1153.0
+offset_bottom = 648.0
+color = Color(0.113725, 0.2, 0.286275, 1)
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 56.0
+offset_top = 74.0
+offset_right = 1008.0
+offset_bottom = 517.0
+rotation = -0.0872665
+theme_override_colors/font_color = Color(0.456786, 0.867613, 1, 1)
+theme_override_colors/font_shadow_color = Color(0.589132, 0.51867, 0.183223, 1)
+theme_override_colors/font_outline_color = Color(0.780392, 0.690196, 0.27451, 1)
+theme_override_constants/shadow_offset_x = 5
+theme_override_constants/shadow_offset_y = 5
+theme_override_fonts/font = ExtResource("1_nmofl")
+theme_override_font_sizes/font_size = 150
+text = "Park Treasures"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 0
+offset_left = 494.0
+offset_top = 340.0
+offset_right = 770.0
+offset_bottom = 438.0
+theme_override_colors/font_hover_color = Color(0.77833, 0.570025, 3.85046e-07, 1)
+theme_override_colors/font_pressed_color = Color(0.949118, 0.123152, 0.750817, 1)
+theme_override_colors/font_color = Color(0.738518, 0.739548, 0.0678529, 1)
+theme_override_fonts/font = ExtResource("2_mqchn")
+theme_override_font_sizes/font_size = 60
+text = "PLAY!"
+flat = true
+script = ExtResource("3_iriwt")
+
+[connection signal="pressed" from="Button" to="Button" method="_on_pressed"]

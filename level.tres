@@ -1,0 +1,20 @@
+[gd_resource type="Environment" load_steps=4 format=3 uid="uid://c1aucvntnmfc"]
+
+[ext_resource type="Texture2D" uid="uid://cqj6g4f0bdgsy" path="res://grasstexture.png" id="1_eo4lp"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_liv6v"]
+sky_top_color = Color(0.258908, 0.739504, 1, 1)
+sky_horizon_color = Color(0.802395, 0.620044, 0.338922, 1)
+sky_cover = ExtResource("1_eo4lp")
+sky_cover_modulate = Color(0.280509, 0.304959, 0.862956, 1)
+ground_bottom_color = Color(0.0514723, 0.260922, 0, 1)
+ground_horizon_color = Color(0.803922, 0.619608, 0.337255, 1)
+
+[sub_resource type="Sky" id="Sky_skej8"]
+sky_material = SubResource("ProceduralSkyMaterial_liv6v")
+
+[resource]
+background_mode = 2
+sky = SubResource("Sky_skej8")
+ambient_light_color = Color(0.265361, 0.265361, 0.265361, 1)
+reflected_light_source = 2
